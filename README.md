@@ -49,7 +49,6 @@ pandas==0.20.3
 PyQt5==5.9  
 python-dateutil==2.6.1  
 pytz==2017.2  
-qtpandas==1.0.4  
 QtPy==1.3.1  
 requests==2.18.4  
 sip==4.19.3  
@@ -58,11 +57,14 @@ six==1.11.0
 
 2. 修正过的qtpandas  
 >qtpandas在github上的最新版本代码有问题，需要修正  
-请下载本项目下修正过的qtpandas代码安装  
->对应目录：qtpandas_1.0.4_v2
+请下载本项目下修正过的qtpandas代码安装
+之前写这个小程序时给qtpandas提交了这个问题的issue,2018年8月，收到邮件，昨天已经修复这个bug.
+可以直接在github上搜索qtpandas，然后 pip install .安装，或者python setup.py
+安装，也可以cd到本程序所在目录里的qtpandas_1.0.4中使用pip安装。
+>对应目录：qtpandas_1.0.4
 
 ## 使用说明
-1.执行 python main.py，程序启动界面如下  
+1.执行 python run.py，程序启动界面如下  
 ![Alt text](./resource/image/启动界面.jpg)  
 
 2.选择省、市，然后输入关键词，例：四川省 成都市 天府广场 
