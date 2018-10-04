@@ -58,8 +58,10 @@ six==1.11.0
 2. 修正过的qtpandas  
 >qtpandas在github上的最新版本代码有问题，需要修正  
 请下载本项目下修正过的qtpandas代码安装
-> 之前写这个小程序时给qtpandas提交了这个问题的issue,2018年8月，收到邮件，已经修复这个bug.
-可以直接在github上搜索qtpandas，然后 pip install .安装，或者python setup.py
+> 之前写这个小程序时给qtpandas提交了这个问题的issue,
+
+2018年8月，收到邮件，已经修复这个bug.
+可以直接在github上搜索qtpandas，然后 ```pip install .```安装，或者```python setup.py```
 安装，也可以cd到本程序所在目录里的qtpandas_1.0.4中使用pip安装。
 >对应目录：qtpandas_1.0.4
 
