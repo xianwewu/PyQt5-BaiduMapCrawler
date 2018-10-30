@@ -35,10 +35,7 @@
 ├── requirements.txt 依赖包    
 └── resource 资源文件  
     ├── image 界面加载图标以及程序运行截图  
-    │   ├── run_main.gif  
-    │   ├── spider2.png  
-    │   ├── spider3.png  
-    │   ├── spider.png  
+    │   ├── run_main.gif   
     │   ├── 导出结果界面.jpg  
     │   ├── 启动界面.jpg    
     │   ├── 抓取结果.jpg  
@@ -50,14 +47,14 @@
 ## 依赖库
 1.requirements.txt（可以直接使用pip install requirements.txt安装）
 
-		numpy==1.13.3  
-		openpyxl==2.4.9  
-		pandas==0.20.3  
-		PyQt5==5.9  
-		python-dateutil==2.6.1  
-		requests==2.18.4  
-		sip==4.19.3  
-		six==1.11.0  
+	numpy==1.13.3  
+	openpyxl==2.4.9  
+	pandas==0.20.3  
+	PyQt5==5.9  
+	python-dateutil==2.6.1  
+	requests==2.18.4  
+	sip==4.19.3  
+	six==1.11.0  
 
 
 2. 修正过的qtpandas  
@@ -95,7 +92,7 @@
 
 ## License
 
-[Apache 2.0 License](./LICENSE).
+[Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0.html).
 
 
 
