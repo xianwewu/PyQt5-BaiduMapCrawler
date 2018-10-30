@@ -73,12 +73,20 @@ six==1.11.0
 ## 使用说明
 1.执行 python run.py，程序启动界面如下  
 
-![Alt text](./resource/image/启动界面.jpg)  
+<p align="center">
+  <img src="./resource/image/启动界面.jpg" alt="start"
+       width="800" height="630">
+</p>
+
 
 
 2.选择省、市，然后输入关键词，例：四川省 成都市 天府广场 
-![Alt text](./resource/image/run_main.gif)  
+
  
+<p align="center">
+  <img src="./resource/image/启动界面.jpg" alt="run_main.gif"
+       width="800" height="630">
+</p>
 
 3.导出抓取结果为excel表格  
 ![Alt text](./resource/image/导出结果界面.jpg)
