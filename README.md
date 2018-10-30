@@ -58,7 +58,7 @@
 		requests==2.18.4  
 		sip==4.19.3  
 		six==1.11.0  
-		urllib3==1.22
+
 
 2. 修正过的qtpandas  
 >qtpandas在github上的最新版本代码有问题，需要修正  
