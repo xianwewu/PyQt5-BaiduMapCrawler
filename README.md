@@ -81,16 +81,16 @@ six==1.11.0
 
 
 2.选择省、市，然后输入关键词，例：四川省 成都市 天府广场 
-
+![Alt text](./resource/image/run_main.gif)  
  
-<p align="center">
-  <img src="./resource/image/启动界面.jpg" alt="run_main.gif"
-       width="800" height="630">
-</p>
+
 
 3.导出抓取结果为excel表格  
-![Alt text](./resource/image/导出结果界面.jpg)
 
+<p align="center">
+  <img src="./resource/image/导出结果界面.jpg" alt="导出结果界面.j"
+       width="800" height="630">
+</p>
 
 
 ## License
