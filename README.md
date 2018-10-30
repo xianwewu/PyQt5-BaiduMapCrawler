@@ -49,15 +49,16 @@
 
 ## 依赖库
 1.requirements.txt（可以直接使用pip install requirements.txt安装）
- ```numpy==1.13.3  
-openpyxl==2.4.9  
-pandas==0.20.3  
-PyQt5==5.9  
-python-dateutil==2.6.1  
-requests==2.18.4  
-sip==4.19.3  
-six==1.11.0  
-urllib3==1.22```
+
+		numpy==1.13.3  
+		openpyxl==2.4.9  
+		pandas==0.20.3  
+		PyQt5==5.9  
+		python-dateutil==2.6.1  
+		requests==2.18.4  
+		sip==4.19.3  
+		six==1.11.0  
+		urllib3==1.22
 
 2. 修正过的qtpandas  
 >qtpandas在github上的最新版本代码有问题，需要修正  
