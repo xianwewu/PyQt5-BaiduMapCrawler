@@ -71,8 +71,7 @@
 1.执行 python run.py，程序启动界面如下  
 
 <p align="center">
-  <img src="./resource/image/启动界面.jpg" alt="start"
-       width="800" height="630">
+  <img src="./resource/image/启动界面.jpg" alt="start">
 </p>
 
 
@@ -85,8 +84,7 @@
 3.导出抓取结果为excel表格  
 
 <p align="center">
-  <img src="./resource/image/导出结果界面.jpg" alt="导出结果界面.j"
-       width="800" height="630">
+  <img src="./resource/image/导出结果界面.jpg" alt="导出结果界面">
 </p>
 
 
