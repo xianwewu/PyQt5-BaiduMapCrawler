@@ -49,8 +49,7 @@
 
 ## 依赖库
 1.requirements.txt（可以直接使用pip install requirements.txt安装）
->  
-numpy==1.13.3  
+ ```numpy==1.13.3  
 openpyxl==2.4.9  
 pandas==0.20.3  
 PyQt5==5.9  
@@ -58,7 +57,7 @@ python-dateutil==2.6.1
 requests==2.18.4  
 sip==4.19.3  
 six==1.11.0  
->urllib3==1.22  
+urllib3==1.22```
 
 2. 修正过的qtpandas  
 >qtpandas在github上的最新版本代码有问题，需要修正  
@@ -81,9 +80,9 @@ six==1.11.0
 
 
 2.选择省、市，然后输入关键词，例：四川省 成都市 天府广场 
+
 ![Alt text](./resource/image/run_main.gif)  
  
-
 
 3.导出抓取结果为excel表格  
 
