@@ -1,4 +1,16 @@
-# 百度地图数据采集工具使用说明
+<img align="right" width="290" height="290" src="https://pic4.zhimg.com/v2-78d1472351272f41d8dd76a6d8a635c7_xll.jpg">
+
+# 百度地图数据采集GUI工具
+===========================================
+
+[![image](https://img.shields.io/pypi/v/requests.svg)](https://pypi.org/project/requests/)
+[![image](https://img.shields.io/pypi/l/requests.svg)](https://pypi.org/project/requests/)
+![PyPI - Python Version](https://img.shields.io/pypi/pyversions/Django.svg)
+
+
+
+
+
 
 ## 功能和项目文档结构：
 1.功能
@@ -37,19 +49,12 @@
 
 ## 依赖库
 1.requirements.txt（可以直接使用pip install requirements.txt安装）
->certifi==2017.7.27.1  
-chardet==3.0.4  
-et-xmlfile==1.0.1  
-future==0.16.0  
-idna==2.6  
-jdcal==1.3  
+>  
 numpy==1.13.3  
 openpyxl==2.4.9  
 pandas==0.20.3  
 PyQt5==5.9  
 python-dateutil==2.6.1  
-pytz==2017.2  
-QtPy==1.3.1  
 requests==2.18.4  
 sip==4.19.3  
 six==1.11.0  
@@ -67,7 +72,9 @@ six==1.11.0
 
 ## 使用说明
 1.执行 python run.py，程序启动界面如下  
+
 ![Alt text](./resource/image/启动界面.jpg)  
+
 
 2.选择省、市，然后输入关键词，例：四川省 成都市 天府广场 
 ![Alt text](./resource/image/run_main.gif)  
@@ -75,6 +82,12 @@ six==1.11.0
 
 3.导出抓取结果为excel表格  
 ![Alt text](./resource/image/导出结果界面.jpg)
+
+
+
+## License
+
+[Apache 2.0 License](./LICENSE).
 
 
 
