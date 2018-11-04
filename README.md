@@ -42,7 +42,8 @@
         └── Mainwindow.qss  
 >
 
-## 依赖库
+## 准备工作安
+### 安装依赖库
 * python 依赖库参考项目根目录 `requirements.txt`（可以直接使用pip install requirements.txt安装）
 
 	numpy==1.13.3  
@@ -54,8 +55,8 @@
 	sip==4.19.3  
 	six==1.11.0  
 
-
-注意 qtpandas 要使用最新版本的qtpandas  
+### 安装依赖库过程中常见问题与解决方法
+*  qtpandas 要使用最新版本的qtpandas  
 >qtpandas在github上的最新版本代码有问题，需要修正  
 请下载本项目下修正过的qtpandas代码安装
 
@@ -68,7 +69,13 @@
 > 另外，也可以cd到本程序所在目录里的qtpandas_1.0.4中使用pip安装。
 >对应目录：qtpandas_1.0.4
 
-* 另外 ，本项目使用到了pyqt5，所以如果在安装过程中遇到一些错误，请自行百度解决。
+* 若在安装`pyside`过程中报错,手动下载相应python版本的[pyside](https://www.lfd.uci.edu/~gohlke/pythonlibs/#pyside)安装
+
+
+		Complete output from command python setup.py egg_info:
+		only these python versions are supported: [(2, 6), (2, 7), (3, 2), (3, 3), (3, 4)]
+
+
  
 ## 使用说明
 1.执行 python run.py，程序启动界面如下  
