@@ -1,4 +1,4 @@
-<img align="right" width="290" height="290" src="https://pic4.zhimg.com/v2-78d1472351272f41d8dd76a6d8a635c7_xll.jpg">
+<img align="right" width="200" height="200" src="https://pic4.zhimg.com/v2-78d1472351272f41d8dd76a6d8a635c7_xll.jpg">
 
 # 百度地图数据采集GUI工具
 ===========================================
@@ -6,8 +6,6 @@
 [![image](https://img.shields.io/pypi/v/requests.svg)](https://pypi.org/project/requests/)
 [![image](https://img.shields.io/pypi/l/requests.svg)](https://pypi.org/project/requests/)
 ![PyPI - Python Version](https://img.shields.io/pypi/pyversions/Django.svg)
-
-
 
 
 
@@ -60,11 +58,14 @@
 2. 修正过的qtpandas  
 >qtpandas在github上的最新版本代码有问题，需要修正  
 请下载本项目下修正过的qtpandas代码安装
+
 > 之前写这个小程序时给qtpandas提交了这个问题的issue,
 
-2018年8月，收到邮件，已经修复这个bug.
+> 2018年8月，收到qtpandas作者回复，已经修复这个bug.
 可以直接在github上搜索qtpandas，然后 ```pip install .```安装，或者```python setup.py```
-安装，也可以cd到本程序所在目录里的qtpandas_1.0.4中使用pip安装。
+> 注意还是要下载到本地安装，不要直接使用`pip install qtpandas `安装。
+> 
+> 另外，也可以cd到本程序所在目录里的qtpandas_1.0.4中使用pip安装。
 >对应目录：qtpandas_1.0.4
 
 ## 使用说明
