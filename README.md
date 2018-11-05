@@ -98,9 +98,11 @@ qtpandas在github上的最新版本代码有问题，需要修正
 
 ## 联系我
 
-你可以在这里找到我：
+你可以在这里找到我：[夜雨微寒的人个人主页](https://xugongli.github.io/about/)
 
-[夜雨微寒的人个人主页](https://xugongli.github.io/about/)
+当然，你也可以在本界面的主窗口中,点击`关于我`，访问[我的主页](https://xugongli.github.io/about/)，或者给我留言。
+
+![Alt text](./resource/image/about_me.gif)  
 
 
 ## License
