@@ -1,17 +1,24 @@
 # -*- coding: utf-8 -*-
 
+import os
+from PyQt5.QtWebEngineWidgets import QWebEngineView
+from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5.QtWebEngineWidgets import QWebEngineView
+from PyQt5.QtCore import QUrl, QTimer
+from PyQt5.QtWidgets import  QApplication
 # Form implementation generated from reading ui file 'F:\PyQt5_Workstation\baidumap_crawler.ui'
 #
 # Created by: soaringsoul
 #
 # WARNING! All changes made in this file will be lost!
+from PyQt5.QtWidgets import (QAction, QMessageBox)
 
-from PyQt5 import QtCore, QtGui, QtWidgets
-from PyQt5.QtGui import QPalette , QBrush , QPixmap
-from PyQt5.QtWidgets import QApplication,  QLabel  ,QWidget, QVBoxLayout , QPushButton, QMainWindow
-from PyQt5.QtCore import Qt
-import os
 
+class WebView(QWebEngineView):
+    def __init__(self, url='https://xugongli.github.io/'):
+        super(WebView, self).__init__()
+        self.load(QUrl(url))
+        self.show()
 
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
@@ -24,7 +31,11 @@ class Ui_MainWindow(object):
         MainWindow.setSizePolicy(sizePolicy)
         qss_file = open(os.getcwd() + '/resource/QSS/Mainwindow.qss').read()
         self.setStyleSheet(qss_file)
-
+        self.aboutAct = QAction("&About", self,
+                                statusTip="Show the application's About box",
+                                triggered=self.about)
+        # self.mainAct = QAction("回到主程序界面", self,
+        #                         statusTip="Show the application's About box")
 
         self.centralWidget = QtWidgets.QWidget(MainWindow)
         self.centralWidget.setObjectName("centralWidget")
@@ -144,8 +155,7 @@ class Ui_MainWindow(object):
         self.listWidget.setObjectName("listWidget")
         self.verticalLayout.addWidget(self.listWidget)
         self.horizontalLayout_4.addLayout(self.verticalLayout)
-        
-        
+
         MainWindow.setCentralWidget(self.centralWidget)
         self.menuBar = QtWidgets.QMenuBar(MainWindow)
         self.menuBar.setGeometry(QtCore.QRect(0, 0, 1030, 26))
@@ -169,12 +179,8 @@ class Ui_MainWindow(object):
         outPutAction = QtWidgets.QAction(QtGui.QIcon(os.getcwd() + '/resource/spider.png'), '导出文件', self)
         outPutAction.triggered.connect(self.outPutFile)
         self.menu.addAction(outPutAction)
-
-        # 设置窗口背景
-        # win = QMainWindow()
-        # palette = QPalette()
-        # palette.setColor(QPalette.Background, Qt.black)
-        # win.setPalette(palette)
+        self.menu_3.addAction(self.aboutAct)
+        # self.menu_2.addAction(self.mainAct)
 
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
@@ -186,58 +192,63 @@ class Ui_MainWindow(object):
         self.pushButton_crawl.setText(_translate("MainWindow", "开始抓取"))
         self.pushButton_clear.setText(_translate("MainWindow", "清空结果"))
         self.menu.setTitle(_translate("MainWindow", "导出结果"))
-        self.menu_2.setTitle(_translate("MainWindow", "关于"))
-        self.menu_3.setTitle(_translate("MainWindow", "联系我"))
-
-
-
+        self.menu_3.setTitle(_translate("MainWindow", "关于我"))
+        # self.menu_2.setTitle(_translate("MainWindow", "主程序"))
 
     def outPutFile(self):
         print('开始运行导出程序')
         try:
-                self.Filedialog = QtWidgets.QDialog(self.centralWidget)
-                self.Filedialog.setFixedSize(600, 150)
-                self.Filedialog.setWindowTitle('导出EXCEL文件')
-                self.Filedialog.setModal(True)
+            self.Filedialog = QtWidgets.QDialog(self.centralWidget)
+            self.Filedialog.setFixedSize(600, 150)
+            self.Filedialog.setWindowTitle('导出EXCEL文件')
+            self.Filedialog.setModal(True)
 
-                self.Dirlabel = QtWidgets.QLabel(self.Filedialog)
-                self.Dirlabel.move(20, 40)
-                self.Dirlabel.setFixedSize(70, 30)
-                self.Dirlabel.setText('文件位置: ')
+            self.Dirlabel = QtWidgets.QLabel(self.Filedialog)
+            self.Dirlabel.move(20, 40)
+            self.Dirlabel.setFixedSize(70, 30)
+            self.Dirlabel.setText('文件位置: ')
 
-                self.DirlineEdit = QtWidgets.QLineEdit(self.Filedialog)
-                self.DirlineEdit.move(100, 40)
-                self.DirlineEdit.setFixedSize(350, 30)
-                self.DirlineEdit.setText(os.getcwd())
 
-                self.Filelabel = QtWidgets.QLabel(self.Filedialog)
-                self.Filelabel.move(20, 100)
-                self.Filelabel.setFixedSize(70, 30)
-                self.Filelabel.setText('文件名称: ')
+            self.DirlineEdit = QtWidgets.QLineEdit(self.Filedialog)
+            self.DirlineEdit.move(100, 40)
+            self.DirlineEdit.setFixedSize(350, 30)
+            self.DirlineEdit.setText(os.getcwd())
 
-                self.FilelineEdit = QtWidgets.QLineEdit(self.Filedialog)
-                self.FilelineEdit.move(100, 100)
-                self.FilelineEdit.setFixedSize(350, 30)
+            self.Filelabel = QtWidgets.QLabel(self.Filedialog)
+            self.Filelabel.move(20, 100)
+            self.Filelabel.setFixedSize(70, 30)
+            self.Filelabel.setText('文件名称: ')
 
-                self.YesButton = QtWidgets.QPushButton(self.Filedialog)
-                self.YesButton.move(470, 100)
-                self.YesButton.setFixedSize(100, 30)
-                self.YesButton.setText('确定')
-                self.YesButton.clicked.connect(self.saveFileToExcel)
 
-                self.browlButton = QtWidgets.QPushButton(self.Filedialog)
-                self.browlButton.move(470, 40)
-                self.browlButton.setFixedSize(100, 30)
-                self.browlButton.setText('浏览')
-                self.browlButton.clicked.connect(self.openFile)
+            self.FilelineEdit = QtWidgets.QLineEdit(self.Filedialog)
+            self.FilelineEdit.move(100, 100)
+            self.FilelineEdit.setFixedSize(350, 30)
+            self.FilelineEdit.setText("文件名.xlsx")
 
-                self.Filedialog.show()
+            self.YesButton = QtWidgets.QPushButton(self.Filedialog)
+            self.YesButton.move(470, 100)
+            self.YesButton.setFixedSize(100, 30)
+            self.YesButton.setText('确定')
+            self.YesButton.clicked.connect(self.saveFileToExcel)
+
+            self.browlButton = QtWidgets.QPushButton(self.Filedialog)
+            self.browlButton.move(470, 40)
+            self.browlButton.setFixedSize(100, 30)
+            self.browlButton.setText('浏览')
+            self.browlButton.clicked.connect(self.openFile)
+
+            self.Filedialog.show()
         except Exception as e:
-                print(e)
+            print(e)
+
+    def about(self):
+        self.webview = WebView()
+        self.webview.load(QUrl("https://xugongli.github.io/"))
+        self.setCentralWidget(self.webview)
+
 
 
 from qtpandas.views.DataTableView import DataTableWidget
-
 
 if __name__ == "__main__":
     import sys
@@ -248,4 +259,3 @@ if __name__ == "__main__":
     ui.setupUi(MainWindow)
     MainWindow.show()
     sys.exit(app.exec_())
-

@@ -1,12 +1,7 @@
-from PyQt5 import QtCore, QtGui, QtWidgets
-from PyQt5.QtGui import QIcon
 import time
+
 import requests
-import json
-import openpyxl
-import codecs
-import pandas as pd
-from pandas import DataFrame
+from PyQt5 import QtCore
 
 
 class BdMapCrawler(QtCore.QThread):
@@ -119,11 +114,13 @@ class BdMapCrawler(QtCore.QThread):
         data_json = res.json()
         data_pois = data_json['content']
         # 打印抓取到的百度地图pois数据
+        df_lst = []
         for dict_here in data_pois:
             print_list = [
                 dict_here['name'],
                 dict_here['area_name']]
             poi_str = '获取数据ing：%s' % (print_list)
             print(poi_str)
-            self.poi_is_crawling.emit(print_list)
+            df_lst.append(print_list)
+        self.poi_is_crawling.emit(df_lst)
         return data_pois

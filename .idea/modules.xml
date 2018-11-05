@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/BaiduMapCrawler.iml" filepath="$PROJECT_DIR$/.idea/BaiduMapCrawler.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/PyQt5-BaiduMapCrawler.iml" filepath="$PROJECT_DIR$/.idea/PyQt5-BaiduMapCrawler.iml" />
     </modules>
   </component>
 </project>

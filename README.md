@@ -78,7 +78,7 @@
 
  
 ## 使用说明
-1.执行 python run.py，程序启动界面如下  
+1. 执行 python run.py，程序启动界面如下  
 
 <p align="center">
   <img src="./resource/image/启动界面.jpg" alt="start">
@@ -86,21 +86,29 @@
 
 
 
-2.选择省、市，然后输入关键词，例：四川省 成都市 天府广场 
+2. 选择省、市，然后输入关键词，例：天津市 便利店
 
 ![Alt text](./resource/image/run_main.gif)  
  
 
-3.导出抓取结果为excel表格  
+3. 导出抓取结果为excel表格  
 
-<p align="center">
-  <img src="./resource/image/导出结果界面.jpg" alt="导出结果界面">
-</p>
+
+![Alt text](./resource/image/result_output.gif)  
+
+4. 导出excel文件示例
+
+![Alt text](./resource/image/result.png)  
+
+
+
+## 联系我
+
+你可以在这里找到我：
+
+[夜雨微寒的人个人主页](https://xugongli.github.io/about/)
 
 
 ## License
 
 [Apache 2.0 License](https://www.apache.org/licenses/LICENSE-2.0.html).
-
-
-

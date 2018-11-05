@@ -1,20 +1,20 @@
 # 导入python 自带库
+import json
+import os
+import time
+
+import openpyxl
+import pandas as pd
+import requests
+from ChinaArea.China_area import province_dict, cities_dict, city_code_dict
+from Crawler.BaiduMapCrawler import BdMapCrawler
+# 导入自定义模块
+from Mainwindow.Mainwindow import Ui_MainWindow
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtCore import pyqtSlot
 from PyQt5.QtGui import QIcon
-import time
-import requests
-import json
-import openpyxl
-import os
-import pandas as pd
 from pandas import DataFrame
 from qtpandas.models.DataFrameModel import DataFrameModel
-
-# 导入自定义模块
-from Mainwindow.Mainwindow import Ui_MainWindow
-from ChinaArea.China_area import province_dict, cities_dict, city_code_dict
-from Crawler.BaiduMapCrawler import BdMapCrawler
 
 
 class BaiduMapCrawler_main(QtWidgets.QMainWindow, Ui_MainWindow):
@@ -75,10 +75,10 @@ class BaiduMapCrawler_main(QtWidgets.QMainWindow, Ui_MainWindow):
     def show_crawl_progress(self, string):
         self.label_progress.setText(string)
 
-    def display_poi_is_crawling(self, poi_str):
-        # print(poi_str)
-        df = DataFrame([poi_str], columns=['poi_name', '区域'])
-        print(df)
+    def display_poi_is_crawling(self, poi_str_lst):
+
+        df = DataFrame(poi_str_lst, columns=['poi_name', '区域'])
+
         self.model.setDataFrame(df)
 
     def crawl(self):
@@ -126,7 +126,7 @@ class BaiduMapCrawler_main(QtWidgets.QMainWindow, Ui_MainWindow):
         return df
 
     def write_to_excel(self, df):
-        filename = time.strftime("%Y%m%d_%Hh_%Mm_%Ss") + '.xlsx'
+        filename = time.strftime("%Y-%m-%d_%Hh_%Mm_%Ss") + '.xlsx'
         df.to_excel(filename, index=False)
         print("抓取数据已经写入到本地！")
 
@@ -138,11 +138,11 @@ class BaiduMapCrawler_main(QtWidgets.QMainWindow, Ui_MainWindow):
     def saveFileToExcel(self):
         try:
             fileName = self.FilelineEdit.text()
-            if fileName == '':
-                fileName = time.strftime("%Y%m%d_%Hh_%Mm_%Ss") + '.xlsx'
+            if fileName in ['', "文件名.xlsx"]:
+                fileName = time.strftime("%Y-%m-%d_%Hh_%Mm_%Ss") + '采集结果.xlsx'
 
             fileName_path = self.DirlineEdit.text()
-            fileName_path = os.path.join(fileName_path, '%s.xlsx' % fileName)
+            fileName_path = os.path.join(fileName_path, fileName)
             print(fileName_path)
 
             if os.path.isfile(fileName_path):
