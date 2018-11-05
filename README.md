@@ -28,21 +28,18 @@
 ├── Mainwindow Ui界面文件  
 │   ├── __init__.py  
 │   └── Mainwindow.py  
-├── qtpandas_1.0.4_v2 修正后的qtpandas安装包   
+├── qtpandas_1.0.4 修正后的qtpandas安装包   
 ├── README.md 项目文档说明  
 ├── requirements.txt 依赖包    
 └── resource 资源文件  
     ├── image 界面加载图标以及程序运行截图  
     │   ├── run_main.gif   
-    │   ├── 导出结果界面.jpg  
-    │   ├── 启动界面.jpg    
-    │   ├── 抓取结果.jpg  
-    │   └── 抓取时界面.jpg  
     └── QSS  
         └── Mainwindow.qss  
 >
 
-## 准备工作安
+## 准备工作
+
 ### 安装依赖库
 * python 依赖库参考项目根目录 `requirements.txt`（可以直接使用pip install requirements.txt安装）
 
@@ -56,8 +53,11 @@
 	six==1.11.0  
 
 ### 安装依赖库过程中常见问题与解决方法
+
 *  qtpandas 要使用最新版本的qtpandas  
->qtpandas在github上的最新版本代码有问题，需要修正  
+
+qtpandas在github上的最新版本代码有问题，需要修正  
+
 请下载本项目下修正过的qtpandas代码安装
 
 > 之前写这个小程序时给qtpandas提交了这个问题的issue,
@@ -78,6 +78,7 @@
 
  
 ## 使用说明
+
 1. 执行 python run.py，选择省、市，然后输入关键词，例：天津市 便利店
 
 ![Alt text](./resource/image/run_main.gif)  
@@ -87,6 +88,7 @@
 
 
 ![Alt text](./resource/image/result_output.gif)  
+
 
 3. 导出excel文件示例
 
