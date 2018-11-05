@@ -12,16 +12,19 @@
 
 ## 功能和项目文档结构：
 1.功能
->(1).根据关键词（街道、酒店或其他标志性建筑物等），查询周边的商户、酒店、交通位置等兴趣点  
-(2).使用PyQt5可视化选择抓取选项与抓取结果并可以对抓取结果进行动态编辑  
->(3).抓取结果导出为Excel表格  
+
+* 根据关键词（街道、酒店或其他标志性建筑物等），查询指定区域周边的商户、酒店、交通位置等兴趣点信息  
+
+* 将采集结果以表格形式在界面实时呈现
+
+* 将采集结果导出为Excel文件  
 
 2.项目结构
 >
 ├── ChinaArea 全国省市数据  
 │   ├── China_area.py  
 │   └── __init__.py  
-├── Crawler 爬虫程序  
+├── Crawler 采集程序  
 │   ├── BaiduMapCrawler.py    
 │   └── __init__.py  
 ├── main.py 主程序  
@@ -30,12 +33,12 @@
 │   └── Mainwindow.py  
 ├── qtpandas_1.0.4 修正后的qtpandas安装包   
 ├── README.md 项目文档说明  
-├── requirements.txt 依赖包    
+├── requirements.txt 依赖库文件    
 └── resource 资源文件  
     ├── image 界面加载图标以及程序运行截图  
     │   ├── run_main.gif   
     └── QSS  
-        └── Mainwindow.qss  
+        └── Mainwindow.qss  界面美化文件
 >
 
 ## 准备工作
@@ -43,18 +46,18 @@
 ### 安装依赖库
 * python 依赖库参考项目根目录 `requirements.txt`（可以直接使用pip install requirements.txt安装）
 
-	numpy==1.13.3  
-	openpyxl==2.4.9  
-	pandas==0.20.3  
-	PyQt5==5.9  
-	python-dateutil==2.6.1  
-	requests==2.18.4  
-	sip==4.19.3  
-	six==1.11.0  
+		numpy==1.13.3  
+		openpyxl==2.4.9  
+		pandas==0.20.3  
+		PyQt5==5.9  
+		python-dateutil==2.6.1  
+		requests==2.18.4  
+		sip==4.19.3  
+		six==1.11.0  
 
 ### 安装依赖库过程中常见问题与解决方法
 
-*  qtpandas 要使用最新版本的qtpandas  
+### 安装最新版本的qtpandas 
 
 qtpandas在github上的最新版本代码有问题，需要修正  
 
@@ -69,11 +72,14 @@ qtpandas在github上的最新版本代码有问题，需要修正
 > 另外，也可以cd到本程序所在目录里的qtpandas_1.0.4中使用pip安装。
 >对应目录：qtpandas_1.0.4
 
-* 若在安装`pyside`过程中报错,手动下载相应python版本的[pyside](https://www.lfd.uci.edu/~gohlke/pythonlibs/#pyside)安装
+
+### 安装[PySide](https://www.lfd.uci.edu/~gohlke/pythonlibs/#pyside)
+
+若在安装`pyside`过程中报错,手动下载相应python版本的[pyside](https://www.lfd.uci.edu/~gohlke/pythonlibs/#pyside)安装
 
 
-		Complete output from command python setup.py egg_info:
-		only these python versions are supported: [(2, 6), (2, 7), (3, 2), (3, 3), (3, 4)]
+	Complete output from command python setup.py egg_info:
+	only these python versions are supported: [(2, 6), (2, 7), (3, 2), (3, 3), (3, 4)]
 
 
  
