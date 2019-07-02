@@ -43,52 +43,32 @@
 
 ## 准备工作
 
-### 安装依赖库
+### 1 安装依赖库
 * python 依赖库参考项目根目录 `requirements.txt`（可以直接使用pip install requirements.txt安装）
 
-		numpy==1.13.3  
-		openpyxl==2.4.9  
-		pandas==0.20.3  
-		PyQt5==5.9  
-		python-dateutil==2.6.1  
-		requests==2.18.4  
-		sip==4.19.3  
-		six==1.11.0  
+	​	
 
 ### 安装依赖库过程中常见问题与解决方法
 
-### 安装最新版本的qtpandas 
+### 2 安装最新版本的qtpandas 
 
-qtpandas在github上的最新版本代码有问题，需要修正  
+qtpandas github地址：https://github.com/draperjames/qtpandas
 
-请下载本项目下修正过的qtpandas代码安装
-
-> 之前写这个小程序时给qtpandas提交了这个问题的issue,
+> 之前写这个小程序时qtapndas有点问题，于是给qtpandas提交了这个问题的issue,
 
 > 2018年8月，收到qtpandas作者回复，已经修复这个bug.
 可以直接在github上搜索qtpandas，然后 ```pip install .```安装，或者```python setup.py```
 > 注意还是要下载到本地安装，不要直接使用`pip install qtpandas `安装。
 > 
-> 另外，也可以cd到本程序所在目录里的qtpandas_1.0.4中使用pip安装。
->对应目录：qtpandas_1.0.4
 
 
-### 安装[PySide](https://www.lfd.uci.edu/~gohlke/pythonlibs/#pyside)
 
-若在安装`pyside`过程中报错,手动下载相应python版本的[pyside](https://www.lfd.uci.edu/~gohlke/pythonlibs/#pyside)安装
-
-
-	Complete output from command python setup.py egg_info:
-	only these python versions are supported: [(2, 6), (2, 7), (3, 2), (3, 3), (3, 4)]
-
-
- 
 ## 使用说明
 
 1. 执行 python run.py，选择省、市，然后输入关键词，例：天津市 便利店
 
 ![Alt text](./resource/image/run_main.gif)  
- 
+
 
 2. 导出抓取结果为excel表格  
 
